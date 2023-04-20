@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./../styles/contactus.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAV + HEADER -->
+  <nav>
+    <img src="./../assets/header.png" alt="ikkuodichi header" class="header">
+    <div class="sidebar-overlay"></div>
+    <ul class="nav-list" id="nav_ul">
+      <div class="sidebar-logo-and-x">
+        <a href="./index.html" id="header_a">
+          <img src="./../assets/header.png" alt="header" id="header">
+        </a>
+        <img src="./../assets/close-button.svg" alt="close button" id="close-button">
+      </div>
+      <a href="./index.html" class="link-item">Home</a>
+      <a href="./menus.html" class="link-item">Menus</a>
+      <a href="./promos.html" class="link-item">Promos</a>
+      <a href="./aboutus.html" class="link-item">About Us</a>
+      <a href="./contactus.html" class="link-item">Contact Us</a>
+    </ul>
+    <img src="./../assets/hamburger-menu.svg" alt="burger menu button" id="burger-button">
+  </nav>
+
+  <!-- HERO HOME -->
+  <section class="hero">
+    <img src="./../assets/background-contact-us.jpg" alt="hero contact us background">
+    <h1>Contact Us</h1>
+  </section>
+
+  <!-- FORM -->
+  <section class="form">
+    <h2>Help us to serve you better.</h2>
+    <form action="#" method="post" onsubmit="return validateForm()">
+      <div class="fheader">
+        <h3>Personal Information</h3>
+      </div>
+      <div class="full-name">
+        <label for="fullname">Full Name</label>
+        <input type="text" name="fullname" id="fullName">
+      </div>
+
+      <div class="email">
+        <label for="email">Email Addres</label>
+        <input type="email" name="email" id="email">
+      </div>
+
+      <div class="phone-number">
+        <label for="phone-number">Phone Number</label>
+        <input type="tel" name="phone-number" id="phoneNumber">
+      </div>
+
+      <div class="preference">
+        <label>Preference</label>
+        <div class="pref-ramen-container">
+          <div class="ramen">
+            <input type="radio" name="pref-ramen" id="ramen">
+            <label for="ramen">Ramen</label>
+          </div>
+          <div class="dry-ramen">
+            <input type="radio" name="pref-ramen" id="dryRamen">
+            <label for="dryRamen">Dry Ramen</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="agreement">
+        <input type="checkbox" name="agree-check" id="agreeCheck">
+        <p>By checking and submitting this, you agree to receive newsletter</p>
+      </div>
+
+      <div class="submit-container">
+        <input type="submit" value="Submit" id="submit">
+      </div>
+    </form>
+    <div class="wave-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave"><path fill="#ebdfd4" fill-opacity="1" d="M0,32L80,42.7C160,53,320,75,480,117.3C640,160,800,224,960,240C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+      <div class="wave-bottom"></div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer>
+    <img src="./../assets/footer-IKKUDO_ICHI_GENERAL_PRIMARY_LOGO.png" alt="footer">
+    <p class="eramen-group">Part of ERamen Group</p>
+    <p class="copyright">&#169; Copyright 2023 ERamen All Right Reserved.</p>
+  </footer>
+  <script src="./../js/contactus.js"></script>
+</body>
+</html>

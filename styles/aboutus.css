@@ -17,35 +17,6 @@ body{
 }
 
 /* DESKTOP */
-/* BANNER PROMO */
-.banner{
-  background-color: #AF0E1E;
-  height: 3.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner h3{
-  text-decoration: underline;
-  color: var(--pale-pink);
-}
-
-.banner span{
-  color: white;
-}
-
-.banner .promos{
-  padding: 0.3rem 0.6rem;
-  background-color: #2F2F2F;
-  border: none;
-  color: #FFF;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-left: 1rem;
-}
-
-
 /* NAV */
 nav{
   background-color: black;
@@ -119,7 +90,7 @@ nav ul a:hover{
 }
 
 .history img{
-  height: 17rem;
+  height: 20rem;
 }
 
 .history-text{
@@ -134,12 +105,13 @@ nav ul a:hover{
 .history-text h3{
   margin: 0 0 1rem 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .history-text p{
   margin: 0;
   font-size: 1.2rem;
+  font-weight: 600;
   text-align: justify;
 }
 
@@ -147,11 +119,16 @@ nav ul a:hover{
 .vandm{
   display: flex;
   position: relative;
-  margin-top: 3rem;
+  align-items: center;
+  padding: 5rem 0;
+  background-color: var(--dark-grey);
+  color: var(--pale-pink);
 }
 
-.history img{
-  height: 17rem;
+.vandm img{
+  height: 8.5rem;
+  padding: 0 7rem 0 0;
+
 }
 
 .vandm-text{
@@ -160,18 +137,19 @@ nav ul a:hover{
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0 5rem;
+  padding: 0 7rem;
 }
 
 .vandm-text h3{
   margin: 0 0 1rem 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
-.history-text p{
+.vandm p{
   margin: 0;
   font-size: 1.2rem;
+  font-weight: 500;
   text-align: justify;
 }
 
@@ -186,8 +164,8 @@ footer{
 }
 
 footer img{
-  margin: 2.5rem 0 2rem 0;
-  width: 14rem;
+  margin: 2.5rem 0 1rem 0;
+  width: 12rem;
 }
 
 .copyright{
@@ -208,6 +186,56 @@ footer img{
   display: none;
   filter: opacity(0);
   transition: 0.4s ease-in;
+}
+
+@media screen and (max-width: 1156px){
+  /* HISTORY & VISION AND MISSIONG */
+  .history-text h3, .vandm-text h3{
+    font-size: 1.5rem;
+  }
+
+  .history-text p, .vandm-text p{
+    font-size: 0.75rem;
+    /* font-weight:400; */
+  }
+
+  /* HISTORY */
+  .history{
+    margin: 2rem 0 0 0;
+  }
+
+  .history-text{
+    padding: 0 3.5rem;
+  }
+
+  .history img{
+    height: 13rem;
+  }
+
+  /* VISION AND MISSION */
+  .vandm img{
+    height: 5rem;
+    padding: 0 4rem 0 0;
+  }
+
+  .vandm-text{
+    padding: 0 4rem;
+  }
+
+  /* FOOTER */
+  footer{
+    font-size: 0.6rem;
+  }
+
+  footer img{
+    margin: 1rem 0 0.4rem 0;
+    width: 7rem;
+  }
+  
+  .copyright{
+    position: relative;
+    top: -1rem;
+  }
 }
 
 /* MOBILE */
@@ -300,8 +328,37 @@ footer img{
 
   /* HERO */
   .hero h1{
-    font-size: 4rem;
+    font-size: 3rem;
     top: 7rem;
+    left: 4rem;
+  }
+
+  /* HISTORY & VISION AND MISSION*/
+  .history img, .vandm img{
+    display: none;
+  }
+
+  .history-text, .vandm-text{
+    padding: 0 3.5rem;
+  }
+
+  .history-text h3, .vandm-text h3{
+    font-size: 2rem;
+  }
+
+  .history-text p, .vandm-text p{
+    font-size: 1rem;
+    font-weight:400;
+  }
+
+  /* HISTORY */
+  .history{
+    margin: 2rem 0 3rem 0;
+  }
+
+  /* VISION AND MISSION */
+  .vandm{
+    padding: 3rem 0;
   }
 
   /* FOOTER */
@@ -321,12 +378,6 @@ footer img{
 }
 
 @media screen and (max-width: 600px){ 
-  /* BANNER */
-  .banner{
-    height: 2rem;
-    font-size: 0.7em;
-  }
-
   /* NAV */
   nav{
     height: 2.9rem;
@@ -336,6 +387,31 @@ footer img{
   .hero h1{
     font-size: 2rem;
     top: 4rem;
+    left: 2rem;
+  }
+
+  /* HISTORY & VISION AND MISSION*/
+  .history-text, .vandm-text{
+    padding: 0 2.5rem;
+  }
+
+  .history-text h3, .vandm-text h3{
+    font-size: 1.3rem;
+  }
+
+  .history-text p, .vandm-text p{
+    font-size: 0.7rem;
+    font-weight:400;
+  }
+
+  /* HISTORY */
+  .history{
+    margin: 1rem 0 1.7rem 0;
+  }
+
+  /* VISION AND MISSION */
+  .vandm{
+    padding: 2rem 0;
   }
 
   /* FOOTER */

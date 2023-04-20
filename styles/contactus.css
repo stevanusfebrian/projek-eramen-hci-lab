@@ -1,0 +1,539 @@
+:root{
+  --border: 1px solid hsl(0, 100%, 49%);
+  --dark-grey: #1E1E1E;
+  --pale-pink: #EBDFD4;
+}
+
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* DESKTOP */
+/* NAV */
+nav{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0 2rem;
+}
+
+nav img{
+  width: 8rem;
+  position: relative;
+  top: -5px;
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateX(0);
+}
+
+nav ul a{
+  text-decoration: none;
+  color: var(--pale-pink);
+  font-size: 1em;
+  margin-right: 1.3rem;
+}
+
+nav ul a:last-child{
+  margin-right: 0; 
+}
+
+nav ul a:first-child{
+  font-weight: 600;
+  color: white;
+}
+
+nav ul a:hover{
+  font-weight: 600;
+  color: white;
+  transition: 0.3s;
+}
+
+
+/* HERO SECTION */
+.hero{
+  position: relative;
+}
+
+.hero img{
+  width: 100%;
+  filter: brightness(0.6);
+}
+
+.hero h1{
+  font-size: 5rem;
+  position: absolute;
+  left: 4rem;
+  top: 13rem;
+  color: var(--pale-pink);
+}
+
+/* FORM */
+.form{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6rem;
+}
+
+.form h2{
+  font-size: 3rem;
+  width: 30rem;
+}
+
+.form form{
+  position: relative;
+  border: 3px solid var(--pale-pink);
+  border-radius: 15px;
+  padding: 2rem;
+  background-color: white;
+  margin: 3.5rem 0 3.5rem 7.5rem;
+  /* width: 40%; */
+}
+
+.fheader{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: -3.4rem;
+}
+
+.fheader h3{
+  background-color: white;
+  font-size: 1.8rem;
+  padding: 0 10px;
+  position: absolute;
+  color: var(--pale-pink);
+  margin: 0;
+  top: 0;
+}
+
+.email,
+.phone-number,
+.preference,
+.agreement{
+  margin-top: 1.3rem;
+}
+
+/* FORM FULL NAME, EMAIL, PHONE */
+
+.full-name label,
+.email label,
+.phone-number label{
+  display: block;
+  font-size: 600;
+  font-size: 1.1rem;
+  margin-bottom: 7px;
+}
+
+input[type='text'], 
+input[type='tel'], 
+input[type='email']{
+  width: 100%;
+  border: 2.5px solid var(--pale-pink);
+  border-radius: 7px;
+  padding: 7px 12px;
+  font-size: 1rem;
+  outline: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+input[type='text']:focus, 
+input[type='tel']:focus, 
+input[type='email']:focus{
+  border: 2.5px solid var(--dark-grey);
+  transition: 0.3s;
+}
+
+/* FORM PREFERENCES */
+.pref-ramen-container{
+  display: flex;
+  margin-top: 7px;
+}
+
+.ramen, .dry-ramen{
+  display: flex;
+  align-items: center;
+}
+
+.ramen{
+  margin-right: 1.5rem;
+}
+
+input[type='radio']{
+  transform: scale(1.2);
+  margin: 0;
+  margin-right: 0.5rem;
+}
+/* FORM CHECKBOX */
+.agreement{
+  display: flex;
+  display: 80%;
+}
+
+.agreement input[type='checkbox']{
+  margin-right: 10px;
+  transform: scale(1.2);
+  display: inline-block;
+}
+
+.agreement p{
+  font-size: 0.8rem;
+}
+
+/* FORM SUBMIT BUTTON */
+.submit-container{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.4rem;
+}
+
+#submit{
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5rem 1.1rem;
+  background-color: var(--pale-pink);
+  border: 3px solid var(--pale-pink);
+  border-radius: 10px;
+}
+
+#submit:hover, #submit:focus, #submit:active{
+  cursor: pointer;
+  background-color: white;
+  color: var(--dark-grey);
+  transition: 0.2s ease-in;
+}
+
+.wave-container{
+  z-index: -1;
+}
+.wave{
+  position: absolute;
+  bottom: 95px;
+  left: 0;
+  right: 0;
+}
+.wave-bottom{
+  background-color: var(--pale-pink);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+
+/* FOOTER */
+footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+footer img{
+  margin: 2.5rem 0 1rem 0;
+  width: 12rem;
+}
+
+.copyright{
+  position: relative;
+  top: -1.5rem;
+}
+
+/* NAV ASSETS */
+#burger-button{
+  display: none;
+}
+
+.sidebar-logo-and-x{
+  display: none;
+}
+
+.sidebar-overlay{
+  display: none;
+  filter: opacity(0);
+  transition: 0.4s ease-in;
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px){
+  /* SIDEBAR */
+  .sidebar-overlay{
+    display: none;
+    position: absolute;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .sidebar-overlay-active{
+    display: block;
+    filter: opacity(0.6);
+  }
+
+  .nav-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    z-index: 6;
+    width: 70%;
+    top: -18px;
+    bottom: 0;
+    right: 0;
+    background-color: var(--dark-grey);
+    padding: 0 2rem;
+    transition: 0.4s ease-in;
+    transform: translateX(100%);
+  }
+
+  .nav-slide{
+    transform: translateX(0);
+  }
+
+  nav ul a.link-item{
+    margin: 0 0 0.7rem 0;
+    font-weight: 600;
+    font-size: 1.4em;
+  }
+
+  .sidebar-logo-and-x a{
+    position: relative;
+  }
+
+  #header{
+    top: 0;
+  }
+
+  .sidebar-logo-and-x{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 2.5rem 0 2rem 0;
+    position: relative;
+  }
+
+  #close-button{
+    top: 0;
+  }
+
+  #close-button:hover{
+    cursor: pointer;
+  }
+
+  #header{
+    width: 10rem;
+  }
+
+  #close-button{
+    width: 1.3rem;
+  }
+
+  #burger-button{
+    display: block;
+    width: 1.3rem;
+    top: 0;
+  }
+
+  #burger-button:hover{
+    cursor: pointer;
+  }
+
+  /* HERO */
+  .hero h1{
+    font-size: 4rem;
+    top: 4rem;
+  }
+
+    /* FORM */
+  .form{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .form form{
+    width: 70%;
+    margin: 3.5rem 0;
+  }
+
+  .form h2{
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 1rem 0 0 0;
+  }
+
+  .fheader{
+    top: -3.1rem;
+  }
+
+  .fheader h3{
+    font-size: 1.3rem;
+  }
+
+  .full-name label,
+  .email label,
+  .phone-number label,
+  .preference > label{
+    font-size: 0.8rem;
+  }
+
+  input[type='text'], 
+  input[type='tel'], 
+  input[type='email']{
+    padding: 7px 12px;
+    font-size: 0.7rem;
+  }
+
+  /* FORM PREFERENCE */
+  .pref-ramen-container label{
+    font-size: 0.6rem;
+  }
+
+  /* FORM AGREE */
+  .agreement p{
+    font-size: 0.6rem;
+  }
+
+  /* FOOTER */
+  footer{
+    font-size: 0.6rem;
+    box-sizing: border-box;
+  }
+
+  footer img{
+    margin: 1rem 0 0.4rem 0;
+    width: 8rem;
+  }
+  
+  .copyright{
+    position: relative;
+    top: -1rem;
+  }
+}
+
+@media screen and (max-width: 652px){
+  /* FORM SECTION */
+  .form{
+    padding: 0 3rem;
+  }
+  
+  .form h2{
+    font-size: 1.3rem;
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
+  .form form{
+    width: 100%;
+  }
+
+  .fheader h3{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px){ 
+  /* NAV */
+  nav{
+    height: 2.9rem;
+  }
+
+  /* HERO */
+  .hero h1{
+    font-size: 1.7rem;
+    top: 3rem;
+    left: 2.5rem;
+  }
+
+  /* FORM SECTION */
+  .form h3{
+    font-size: 1rem;
+    top: 0.8rem;
+  }
+
+  .form form{
+    padding: 1.4rem;
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .full-name label,
+  .email label,
+  .phone-number label,
+  .preference > label{
+    font-size: 0.7rem;
+  }
+
+  input[type='text'], 
+  input[type='tel'], 
+  input[type='email']{
+    padding: 7px 8px;
+    font-size: 0.6rem;
+  }
+
+  /* FORM PREFERENCE */
+  .pref-ramen-container label{
+    font-size: 0.6rem;
+  }
+
+  input[type='radio']{
+    transform: scale(0.9);
+    margin-right: 0.25rem;
+  }
+
+  /* FORM AGREEMENT */
+  .agreement input[type='checkbox']{
+    transform: scale(0.8);
+  }
+
+  .agreement p{
+    font-size: 0.5rem;
+  }
+
+  /* FORM SUBMIT BUTTON */
+  .submit-container{
+    margin-top: 0.8rem;
+  }
+
+  #submit{
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+  }
+  
+  /* FOOTER */
+  footer{
+    font-size: 0.6rem;
+  }
+
+  footer img{
+    margin: 1rem 0 0.4rem 0;
+    width: 8rem;
+  }
+  
+  .copyright{
+    position: relative;
+    top: -1rem;
+  }
+}
