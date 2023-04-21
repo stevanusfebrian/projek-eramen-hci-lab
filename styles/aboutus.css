@@ -265,6 +265,7 @@ footer img{
     position: absolute;
     z-index: 3;
     width: 70%;
+    height: 100vh;
     top: -18px;
     bottom: 0;
     right: 0;
