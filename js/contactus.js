@@ -32,7 +32,7 @@ function validateForm()
 
   // EMAIL
   let flag = 0
-  if(email.value.includes('.com') && email.value.includes('@')) flag ++;
+  if(email.value.includes('@')) flag ++;
   if(email.value === '' || flag === 0) error.push('\nEmail is invalid!');
 
   // PHONE NUMBER

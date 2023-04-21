@@ -87,6 +87,7 @@ nav ul a:hover{
   width: 100%;
   position: relative;
   top: -8px;
+  padding: 0 0 1rem 0;
 }
 
 .ramen .black-divider-container{
@@ -112,37 +113,85 @@ nav ul a:hover{
   top: -0.3rem;
 }
 
+.ramen-1{
+  grid-area: ramen-1;
+}
 
-.ramen-menu, .side-menu{
+.ramen-2{
+  grid-area: ramen-2;
+}
+
+.ramen-3{
+  grid-area: ramen-3;
+}
+
+.ramen-4{
+  grid-area: ramen-4;
+}
+
+.ramen-5{
+  grid-area: ramen-5;
+}
+
+.ramen-6{
+  grid-area: ramen-6;
+}
+
+.ramen-7{
+  grid-area: ramen-7;
+}
+
+.ramen-8{
+  grid-area: ramen-8;
+}
+
+
+.ramen-menu{
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "ramen-1 ramen-2 ramen-3"
+    "ramen-4 ramen-5 ramen-6"
+    "ramen-7 ramen-8 .";
   justify-content: center;
+  place-items: center;
   top: 5rem;
+  margin: 2rem 0;
 }
 
-.ramen-list, .side-list{
+.ramen-list{
   text-align: center;
-  padding: 3rem;
+  padding: 1rem 3rem 0 3rem;
 }
 
-.ramen-list img, .side-list img{
+.ramen-list img{
   width: 14rem;
-  /* box-shadow: 0px 4px 6px 0px #000; */
 }
 
-.ramen-list h4, .side-list h4{
+.ramen-list h4{
   position: relative;
   font-size: 1.8em;
   color: var(--dark-grey);
   top: -2rem;
+  margin: 2rem 0 0 0;
+}
+
+.ramen-list p{
+  margin: 0;
+  font-size: 1.1rem;
+  position: relative;
+  top: -1.5rem;
 }
 
 .wave{
   position: relative;
   top: -24px;
+  z-index: -2;
 }
 
-/* NEW MENU SECTION */
+/* SIDE MENU SECTION */
 .sides .black-divider-container{
   display: flex;
   justify-content: center;
@@ -150,9 +199,64 @@ nav ul a:hover{
   top: -14rem;
 }
 
+.side-1{
+  grid-area: side-1;
+}
+
+.side-2{
+  grid-area: side-2;
+}
+
+.side-3{
+  grid-area: side-3;
+  position: relative;
+  top: -1.4rem;
+}
+
+.side-4{
+  grid-area: side-4;
+}
+
 .side-menu{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "side-1 side-2 side-3"
+    "side-4 . .";
+  justify-content: center;
+  place-items: center;
   top: -4rem;
 }
+
+.side-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-list img{
+  width: 14rem;
+  /* box-shadow: 0px 4px 6px 0px #000; */
+}
+
+
+.side-list h4{
+  position: relative;
+  font-size: 1.8em;
+  color: var(--dark-grey);
+  top: -2rem;
+  margin: 2rem 0 0 0;
+}
+
+.side-list p{
+  margin: 0;
+  font-size: 1.1rem;
+  position: relative;
+  top: -1.5rem;
+}
+
 
 /* FOOTER */
 footer{
@@ -303,15 +407,76 @@ footer img{
     top: -0.5rem;
   }
 
-  /* BEST SELLER */
-  .ramen-menu, .side-menu{
+  /* RAMEN */
+  .ramen{
+    padding: 0;
+  }
+
+  .ramen-menu{
     display: grid;
-    grid-template-columns: 220px 220px;
-    grid-template-rows: 200px 200px;
-    top: 0.5rem;
+    grid-template-columns: 260px 260px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "ramen-1 ramen-2"
+      "ramen-3 ramen-4"
+      "ramen-5 ramen-6"
+      "ramen-7 ramen-8";
+    column-gap: 40px;
+    top: 2rem;
   }
   
-  .ramen-list, .side-list{
+  .ramen-list{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem;
+  }
+  
+  .ramen-list img{
+    width: 9rem;
+    /* box-shadow: 0px 4px 6px 0px #000; */
+  }
+  
+  .ramen-list h4{
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--dark-grey);
+    top: -1rem;
+  }
+
+  .ramen-list p{
+    margin: 0.5rem 0 0 0;
+    font-size: 0.8rem;
+  }
+  
+  .wave{
+    position: relative;
+    top: -60px;
+  }
+
+  /* SIDES */
+  .sides .black-divider-container{
+    justify-content: flex-start;
+    top: -12rem;
+    left: 4rem;
+  }
+
+  .side-menu{
+    display: grid;
+    grid-template-columns: 280px 280px;
+    grid-template-rows: 200px 200px;
+    grid-template-areas: 
+      "side-1 side-2"
+      "side-3 side-4";
+    top: -2.5rem;
+  }
+
+  .side-3{
+    top: -0.4rem;
+  }
+  
+  .side-list{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -319,34 +484,21 @@ footer img{
     padding: 3rem;
   }
   
-  .ramen-list img, .side-list img{
+  .side-list img{
     width: 9rem;
-    /* box-shadow: 0px 4px 6px 0px #000; */
   }
   
-  .ramen-list h4, .side-list h4{
+  .side-list h4{
     position: relative;
     font-size: 1.1rem;
     color: var(--dark-grey);
     top: -1rem;
   }
-  
-  .wave{
-    position: relative;
-    /* top: -8px; */
-  }
 
-  /* NEW */
-  .new .black-divider-container{
-    justify-content: flex-start;
-    top: -10rem;
-    left: 4rem;
+  .side-list p{
+    margin: 0.5rem 0 0 0;
+    font-size: 0.8rem;
   }
-
-  .side-menu{
-    top: -4rem;
-  }
-
   /* FOOTER */
   footer{
     font-size: 0.6rem;
@@ -395,15 +547,53 @@ footer img{
     top: -0.2rem;
   }
 
-  /* BEST SELLER */
-  .ramen-menu, .side-menu{
+  /* RAMEN */
+  .ramen-menu{
     display: grid;
-    grid-template-columns: 165px 165px;
-    grid-template-rows: 150px 200px;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: auto;
     top: 0.5rem;
   }
   
-  .ramen-list, .side-list{
+  .ramen-list{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ramen-list img{
+    width: 5rem;
+    /* box-shadow: 0px 4px 6px 0px #000; */
+  }
+  
+  .ramen-list h4{
+    position: relative;
+    font-size: 0.7em;
+    color: var(--dark-grey);
+    top: -1rem;
+  }
+
+  .ramen-list p{
+    font-size: 0.6rem;
+    /* top: -1rem; */
+  }
+  
+  /* SIDE */
+  .sides .black-divider-container{
+    justify-content: flex-start;
+    top: -10rem;
+    left: 2rem;
+  }
+
+  .side-menu{
+    display: grid;
+    grid-template-columns: 165px 165px;
+    grid-template-rows: 150px 200px;
+    top: -1.2rem;
+  }
+  
+  .side-list{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -411,27 +601,19 @@ footer img{
     padding: 3rem;
   }
   
-  .ramen-list img, .side-list img{
-    width: 6rem;
-    /* box-shadow: 0px 4px 6px 0px #000; */
+  .side-list img{
+    width: 5rem;
   }
   
-  .ramen-list h4, .side-list h4{
+  .side-list h4{
     position: relative;
-    font-size: 0.9em;
+    font-size: 0.7em;
     color: var(--dark-grey);
     top: -1rem;
   }
-  
-  /* NEW */
-  .new .black-divider-container{
-    justify-content: flex-start;
-    top: -8.6rem;
-    left: 2rem;
-  }
 
-  .side-menu{
-    top: -4rem;
+  .side-list p{
+    font-size: 0.6rem;
   }
 
   /* FOOTER */
@@ -441,7 +623,7 @@ footer img{
 
   footer img{
     margin: 2.5rem 0 1rem 0;
-    width: 12rem;
+    width: 8rem;
   }
   
   .copyright{
